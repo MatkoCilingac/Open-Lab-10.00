@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 
 namespace Open_Lab_10._00
 {
@@ -6,7 +7,9 @@ namespace Open_Lab_10._00
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("ztfuzuzg");
+            Book LOTR = new Book();
+            LOTR.title = "Lord Of The Rings";
+            Console.WriteLine(LOTR.title);
         }
     }
 }
