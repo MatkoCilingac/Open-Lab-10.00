@@ -1,48 +1,72 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Open_Lab_10._00
 {
     internal class Book
     {
-        
-        private string category; 
-        private string title;
-        private int pages;
-        private string releasedate;
-        private string author;    
-        public string Category(string xcategory)
+
+        public string category;
+        public string title;
+        public int pages;
+        public int releasedate;
+        public string author;
+
+        public string Title
         {
-            this.category = xcategory;
-            return category;
+            get { return title; }
+            set { title = value; }
         }
-        public string Title(string xtitle)
+        public string Category
         {
-            this.title = xtitle;
-            return title;
+            get { return category; }
+            set { category = value; }
         }
-        public string Releasedate(string xreleasedate)
+        public string Author
         {
-            this.releasedate = xreleasedate;
-            return releasedate;
+            get { return author; }
+            set { author = value; }
         }
-        public string Author (string xauthor)
+        public int Pages
         {
-            this.author = xauthor;
-            return author;
+            get { return pages; }
+            set
+            {
+                pages = value;
+                if (pages < 0)
+                {
+                    pages = 1;
+                }
+
+            }
         }
-        public int Pages(int xpages)
+
+        public int Releasedate
         {
-            this.pages = xpages;
-            return pages;
-        }
-        public void Vypis()
-        {
-            Console.WriteLine(category , title , releasedate , author , pages);
-           
+            get { return releasedate; }
+            set
+            {
+                releasedate = value;
+
+                if (releasedate > 2021 | releasedate < 1450)
+                {
+                    releasedate = -1;
+                }
+            }
 
         }
+    
+
+    public override string ToString()
+    {
+        return ($"{category}\n{title}\n{releasedate}\n{author}\n{pages}"); }
+
+           
+
+        
 
     }
 }
