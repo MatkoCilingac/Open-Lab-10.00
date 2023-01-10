@@ -9,12 +9,37 @@ namespace Open_Lab_10._00
     internal class Book
     {
 
-        public string category;
-        public string title;
-        public int pages;
-        public int releasedate;
-        public string author;
+        private string category;
+        private string title;
+        private int pages;
+        private int releasedate;
+        private string author;
 
+        public Book()
+        {
+            category = "-1";
+            title = "-1";
+            pages = -1;
+            releasedate = -1;
+            author = "-1";  
+        }
+        public Book (int iPages, string sTitle)
+        {
+            category = "-1";
+            releasedate=-1;
+            author="-1";
+            this.title = sTitle;
+            this.pages = iPages;
+        }
+        public Book(string sCategory, string sTitle, int iPages, int iReleasedate, string sAuthor)
+        {
+            this.category = sCategory;
+            this.title=sTitle;
+            this.pages = iPages;
+            this.releasedate = iReleasedate;
+            this.author = sAuthor;
+        }
+    
         public string Title
         {
             get { return title; }
