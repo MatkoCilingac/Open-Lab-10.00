@@ -28,6 +28,8 @@ namespace Open_Lab_10._00
             Console.WriteLine(LOTR2.ToString());
             Console.WriteLine(LOTR3.ToString());
             
+            Librarry schoollibrarry = new Librarry(); 
+            
         }
     }
 }
