@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -20,8 +20,8 @@ namespace Open_Lab_10._00
             LOTR.Author = "Michal Bernat";
             LOTR.Pages = 10000;
             Book LOTR3 = new Book();
-            Book LOTR2 = new Book(int iPages, string sTitle);    
-            Book Hobbit = new Book();
+            Book LOTR2 = new Book( 30, "kniha1" );    
+            Book Hobbit = new Book("roman","kniha2", 150, 2005, "cigon");
             Console.WriteLine(LOTR.ToString());
             
         }
