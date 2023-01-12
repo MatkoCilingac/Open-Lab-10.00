@@ -21,12 +21,12 @@ namespace Open_Lab_10._00
             this.title = "-1";
             this.pages = -1;
             this.releasedate = -1;
-            this.author = "-1";  
+            this.author = "-1";
         }
-        public Book (int iPages, string sTitle)
+        public Book(int iPages, string sTitle)
         {
             this.category = "-1";
-            this.releasedate=-1;
+            this.releasedate = -1;
             this.author = "-1";
             this.title = sTitle;
             this.pages = iPages;
@@ -34,12 +34,12 @@ namespace Open_Lab_10._00
         public Book(string sCategory, string sTitle, int iPages, int iReleasedate, string sAuthor)
         {
             this.category = sCategory;
-            this.title= sTitle;
+            this.title = sTitle;
             this.pages = iPages;
             this.releasedate = iReleasedate;
             this.author = sAuthor;
         }
-    
+
         public string Title
         {
             get { return title; }
@@ -47,7 +47,6 @@ namespace Open_Lab_10._00
         }
         public string Category
         {
-            get { return category; }
             set { category = value; }
         }
         public string Author
@@ -83,10 +82,22 @@ namespace Open_Lab_10._00
             }
 
         }
-    
+        public static readonly List<string> categoryList = new List<string>()
+        {
+            "detske", "romanticke", "naucne", "scifi", "dobrodruzny"
 
-    public override string ToString()
-    {
-        return ($"{category}\n{title}\n{releasedate}\n{author}\n{pages}"); 
+        };
+        
+         
+    
+        
+
+        public override string ToString()
+        {
+            return ($"{category}\n{title}\n{releasedate}\n{author}\n{pages}");
+        }
+    }
+}
+            
         
            
